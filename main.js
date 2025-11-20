@@ -40,40 +40,46 @@ function decodeFactorioBlueprint(base64) {
   return decompressed.toString('utf-8');
 }
 
-function drawEntitiesToImage(entities, colorMap, width, height) {
-  // Bild: schwarzer Hintergrund (RGB)
+function drawEntitiesToImage(entities, specs, width, height) {
   const buffer = new Uint8ClampedArray(width * height * 3);
-  // alle Pixel = schwarz
-  buffer.fill(0);
+  buffer.fill(0); // schwarzer Hintergrund
 
   for (const entity of entities) {
-    const { name, position } = entity;
+    const spec = specs[entity.name];
+    if (!spec) continue; // keine Definition → skip
 
-    // Farbe holen
-    const hex = colorMap[name] || "#ffffff"; // fallback weiß
-    const rgb = hexToRgb(hex);
+    const { width: w, height: h, offsetX, offsetY, color } = spec;
+    const rgb = hexToRgb(color);
 
-    // Position runden
-    const px = Math.floor(position.x);
-    const py = Math.floor(position.y);
+    // Mittelpunkt (oder Entity-Position aus Factorio)
+    const baseX = Math.floor(entity.position.x);
+    const baseY = Math.floor(entity.position.y);
 
-    // Grenzen prüfen
-    if (px < 0 || py < 0 || px >= width || py >= height) {
-      continue; // Entity außerhalb vom Bild
+    // Obere linke Ecke der Maschine
+    const startX = baseX + offsetX;
+    const startY = baseY + offsetY;
+
+    // Alle Tiles füllen
+    for (let dy = 0; dy < h; dy++) {
+      for (let dx = 0; dx < w; dx++) {
+        const px = startX + dx;
+        const py = startY + dy;
+
+        // Bounds check
+        if (px < 0 || py < 0 || px >= width || py >= height) continue;
+
+        const index = (py * width + px) * 3;
+        buffer[index]     = rgb.r;
+        buffer[index + 1] = rgb.g;
+        buffer[index + 2] = rgb.b;
+      }
     }
-
-    const index = (py * width + px) * 3;
-
-    buffer[index]     = rgb.r;
-    buffer[index + 1] = rgb.g;
-    buffer[index + 2] = rgb.b;
   }
 
-  return buffer; // reines RGB-Bild
+  return buffer;
 }
 
-
-// Hex → RGB
+// Helper für Hex → RGB
 function hexToRgb(hex) {
   const clean = hex.replace("#", "");
   return {
@@ -89,6 +95,7 @@ colors = {
     "chemical-plant": "#00FF00",
     "turbo-transport-belt": "#007a31",
     "bulk-inserter": "#0089d8ff",
+    "assembling-machine-3": "#ffff00"
 }
 
 try {

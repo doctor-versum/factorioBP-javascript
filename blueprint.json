@@ -1,0 +1,427 @@
+{
+    "blueprint": {
+        "snap-to-grid": {
+            "x": 9,
+            "y": 15
+        },
+        "icons": [
+            {
+                "signal": {
+                    "name": "rocket-fuel"
+                },
+                "index": 1
+            },
+            {
+                "signal": {
+                    "type": "quality",
+                    "name": "legendary"
+                },
+                "index": 2
+            }
+        ],
+        "entities": [
+            {
+                "entity_number": 1,
+                "name": "pipe",
+                "position": {
+                    "x": 0.5,
+                    "y": 0.5
+                }
+            },
+            {
+                "entity_number": 2,
+                "name": "pipe",
+                "position": {
+                    "x": 1.5,
+                    "y": 0.5
+                }
+            },
+            {
+                "entity_number": 3,
+                "name": "pipe",
+                "position": {
+                    "x": 3.5,
+                    "y": 0.5
+                }
+            },
+            {
+                "entity_number": 4,
+                "name": "pipe",
+                "position": {
+                    "x": 2.5,
+                    "y": 0.5
+                }
+            },
+            {
+                "entity_number": 5,
+                "name": "pipe",
+                "position": {
+                    "x": 5.5,
+                    "y": 0.5
+                }
+            },
+            {
+                "entity_number": 6,
+                "name": "pipe",
+                "position": {
+                    "x": 4.5,
+                    "y": 0.5
+                }
+            },
+            {
+                "entity_number": 7,
+                "name": "pipe",
+                "position": {
+                    "x": 7.5,
+                    "y": 0.5
+                }
+            },
+            {
+                "entity_number": 8,
+                "name": "pipe",
+                "position": {
+                    "x": 6.5,
+                    "y": 0.5
+                }
+            },
+            {
+                "entity_number": 9,
+                "name": "pipe-to-ground",
+                "position": {
+                    "x": 6.5,
+                    "y": 1.5
+                }
+            },
+            {
+                "entity_number": 10,
+                "name": "pipe",
+                "position": {
+                    "x": 8.5,
+                    "y": 0.5
+                }
+            },
+            {
+                "entity_number": 11,
+                "name": "chemical-plant",
+                "position": {
+                    "x": 3.5,
+                    "y": 4.5
+                },
+                "quality": "legendary",
+                "recipe": "ice-melting",
+                "recipe_quality": "normal"
+            },
+            {
+                "entity_number": 12,
+                "name": "pipe-to-ground",
+                "position": {
+                    "x": 6.5,
+                    "y": 5.5
+                },
+                "direction": 8
+            },
+            {
+                "entity_number": 13,
+                "name": "turbo-transport-belt",
+                "position": {
+                    "x": 1.5,
+                    "y": 7.5
+                },
+                "direction": 4
+            },
+            {
+                "entity_number": 14,
+                "name": "turbo-transport-belt",
+                "position": {
+                    "x": 2.5,
+                    "y": 7.5
+                },
+                "direction": 4
+            },
+            {
+                "entity_number": 15,
+                "name": "turbo-transport-belt",
+                "position": {
+                    "x": 3.5,
+                    "y": 7.5
+                },
+                "direction": 4
+            },
+            {
+                "entity_number": 16,
+                "name": "bulk-inserter",
+                "position": {
+                    "x": 3.5,
+                    "y": 6.5
+                },
+                "direction": 8,
+                "quality": "legendary"
+            },
+            {
+                "entity_number": 17,
+                "name": "chemical-plant",
+                "position": {
+                    "x": 5.5,
+                    "y": 7.5
+                },
+                "quality": "legendary",
+                "recipe": "heavy-oil-cracking",
+                "recipe_quality": "normal"
+            },
+            {
+                "entity_number": 18,
+                "name": "turbo-transport-belt",
+                "position": {
+                    "x": 1.5,
+                    "y": 9.5
+                }
+            },
+            {
+                "entity_number": 19,
+                "name": "turbo-transport-belt",
+                "position": {
+                    "x": 1.5,
+                    "y": 8.5
+                }
+            },
+            {
+                "entity_number": 20,
+                "name": "pipe",
+                "position": {
+                    "x": 7.5,
+                    "y": 9.5
+                }
+            },
+            {
+                "entity_number": 21,
+                "name": "pipe",
+                "position": {
+                    "x": 6.5,
+                    "y": 9.5
+                }
+            },
+            {
+                "entity_number": 22,
+                "name": "turbo-transport-belt",
+                "position": {
+                    "x": 1.5,
+                    "y": 11.5
+                }
+            },
+            {
+                "entity_number": 23,
+                "name": "turbo-transport-belt",
+                "position": {
+                    "x": 1.5,
+                    "y": 10.5
+                }
+            },
+            {
+                "entity_number": 24,
+                "name": "chemical-plant",
+                "position": {
+                    "x": 3.5,
+                    "y": 10.5
+                },
+                "quality": "legendary",
+                "recipe": "solid-fuel-from-light-oil",
+                "recipe_quality": "normal"
+            },
+            {
+                "entity_number": 25,
+                "name": "bulk-inserter",
+                "position": {
+                    "x": 5.5,
+                    "y": 11.5
+                },
+                "direction": 12,
+                "quality": "legendary"
+            },
+            {
+                "entity_number": 26,
+                "name": "assembling-machine-3",
+                "position": {
+                    "x": 7.5,
+                    "y": 11.5
+                },
+                "quality": "legendary",
+                "recipe": "rocket-fuel",
+                "recipe_quality": "normal"
+            },
+            {
+                "entity_number": 27,
+                "name": "turbo-splitter",
+                "position": {
+                    "x": 0.5,
+                    "y": 13
+                },
+                "direction": 4
+            },
+            {
+                "entity_number": 28,
+                "name": "turbo-transport-belt",
+                "position": {
+                    "x": 1.5,
+                    "y": 13.5
+                },
+                "direction": 4
+            },
+            {
+                "entity_number": 29,
+                "name": "turbo-transport-belt",
+                "position": {
+                    "x": 1.5,
+                    "y": 12.5
+                }
+            },
+            {
+                "entity_number": 30,
+                "name": "turbo-transport-belt",
+                "position": {
+                    "x": 3.5,
+                    "y": 13.5
+                },
+                "direction": 4
+            },
+            {
+                "entity_number": 31,
+                "name": "turbo-transport-belt",
+                "position": {
+                    "x": 2.5,
+                    "y": 13.5
+                },
+                "direction": 4
+            },
+            {
+                "entity_number": 32,
+                "name": "turbo-transport-belt",
+                "position": {
+                    "x": 5.5,
+                    "y": 13.5
+                },
+                "direction": 4
+            },
+            {
+                "entity_number": 33,
+                "name": "turbo-transport-belt",
+                "position": {
+                    "x": 4.5,
+                    "y": 13.5
+                },
+                "direction": 4
+            },
+            {
+                "entity_number": 34,
+                "name": "turbo-underground-belt",
+                "position": {
+                    "x": 6.5,
+                    "y": 13.5
+                },
+                "direction": 4,
+                "type": "input"
+            },
+            {
+                "entity_number": 35,
+                "name": "bulk-inserter",
+                "position": {
+                    "x": 7.5,
+                    "y": 13.5
+                }
+            },
+            {
+                "entity_number": 36,
+                "name": "turbo-underground-belt",
+                "position": {
+                    "x": 8.5,
+                    "y": 13.5
+                },
+                "direction": 4,
+                "type": "output"
+            },
+            {
+                "entity_number": 37,
+                "name": "turbo-transport-belt",
+                "position": {
+                    "x": 1.5,
+                    "y": 14.5
+                },
+                "direction": 12
+            },
+            {
+                "entity_number": 38,
+                "name": "turbo-transport-belt",
+                "position": {
+                    "x": 0.5,
+                    "y": 14.5
+                },
+                "direction": 12
+            },
+            {
+                "entity_number": 39,
+                "name": "turbo-transport-belt",
+                "position": {
+                    "x": 3.5,
+                    "y": 14.5
+                },
+                "direction": 12
+            },
+            {
+                "entity_number": 40,
+                "name": "turbo-transport-belt",
+                "position": {
+                    "x": 2.5,
+                    "y": 14.5
+                },
+                "direction": 12
+            },
+            {
+                "entity_number": 41,
+                "name": "turbo-transport-belt",
+                "position": {
+                    "x": 5.5,
+                    "y": 14.5
+                },
+                "direction": 12
+            },
+            {
+                "entity_number": 42,
+                "name": "turbo-transport-belt",
+                "position": {
+                    "x": 4.5,
+                    "y": 14.5
+                },
+                "direction": 12
+            },
+            {
+                "entity_number": 43,
+                "name": "turbo-transport-belt",
+                "position": {
+                    "x": 7.5,
+                    "y": 14.5
+                },
+                "direction": 12
+            },
+            {
+                "entity_number": 44,
+                "name": "turbo-transport-belt",
+                "position": {
+                    "x": 6.5,
+                    "y": 14.5
+                },
+                "direction": 12
+            },
+            {
+                "entity_number": 45,
+                "name": "turbo-transport-belt",
+                "position": {
+                    "x": 8.5,
+                    "y": 14.5
+                },
+                "direction": 12
+            }
+        ],
+        "item": "blueprint",
+        "label": "Rocket Fuel (Fulgora) - Legendary",
+        "version": 562949954928640
+    }
+}

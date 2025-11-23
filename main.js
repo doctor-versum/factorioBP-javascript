@@ -89,19 +89,12 @@ function hexToRgb(hex) {
   };
 }
 
-colors = {
-    "pipe": "#666666",
-    "pipe-to-ground": "#666666",
-    "chemical-plant": "#00FF00",
-    "turbo-transport-belt": "#007a31",
-    "bulk-inserter": "#0089d8ff",
-    "assembling-machine-3": "#ffff00"
-}
+const specs = {"pipe":{"width":1,"height":1,"offsetX":0,"offsetY":0,"color":"#666666"},"pipe-to-ground":{"width":1,"height":1,"offsetX":0,"offsetY":0,"color":"#666666"},"chemical-plant":{"width":3,"height":3,"offsetX":-1,"offsetY":-1,"color":"#00FF00"},"turbo-transport-belt":{"width":1,"height":1,"offsetX":0,"offsetY":0,"color":"#007a31"},"bulk-inserter":{"width":1,"height":1,"offsetX":0,"offsetY":0,"color":"#0089d8ff"},"assembling-machine-3":{"width":3,"height":3,"offsetX":-1,"offsetY":-1,"color":"#ffff00"}};
 
 try {
 const decoded = decodeFactorioBlueprint("eNqdmM1u4yAUhV8lYjWVzMjg/zxAV7Oa7aiqiEMTVAwejKuJqrz7YKdp3NTYwCqyzfm4JudcSN7Bjve0VUxosH0HnSAt1BIeFNsP1//AtorACWxRdo4Aq6XowPaPGccOgvBhhCANBVugZP1KNXzpKQfDSLGnRovO0XSsPrXD2L894UyfQHQVc3qgYk/UaSLF56cIUKGZZvQy53hxehZ9s6PKsD/lLTPYCLSyM4Ol+Kg7/pmNlZvP81DGnRyvyNGyPFmRJ8vydEWOl+XZijxblucr8nRZXqzIi2V5uSLPl+XVF/nFrLIXezsIzYNQvFJIuVwIujmwPtKG1YTDlhMTJKsbzMIah1/9PzV+BBSt2RgPVlPYUK6ZOHzefr5phFQNGUL2vSDsvTTZWNCemVkuT8s57s3sulc7CbUiomul0nBn6rRnp7inp3P01JOOveiZJz3xot+StOv5K2Sio0qbJ1Zs/m3B5/0wN1nh7Lfsy0us+O1IydsJSsZhrUj96m+7MtAelSVXVSCvtHT62LFfWerByLFh2fQ48H2QpXHh0Dwi216YeneyEbVqrU5yth8PBfBFyQZydjjqwWp+DsOZa8yy6dJ9ydnQHB2Dhm+pJl1Hmx03mYANqY9MUJjYDfQx68qiTI9KfstQ3H3vXWs0s+twPfygZL2J4dD8osSlR+LQOCNsOXrFgS3drd4EBe5HjnjfbpD54X17Q+qHv9+szemCqsspwzJBbp8guv4iYKLt9ZzlE+fkF9Np5ki5d+WlQ+Wy17bSi1Dfp9971xzfN7axJ78KjZkbP41Dc+bIR6FBc+Tj0KQ58n2TXHjyfc/duSff9+RdLvGfIsA0bYY+8Pl/RQQ4MShz7/e4pW4ezZa6+fHY84NU5GEDN78m++8bVd1Iy3JcpVWVpRUu8zQ+n/8DYo6XJA=="); // Beispiel für "✓ à la mode"
 console.log(decoded);
-img = drawEntitiesToImage(JSON.parse(decoded)["blueprint"]["entities"], colors, 10, 20)
+img = drawEntitiesToImage(JSON.parse(decoded)["blueprint"]["entities"], specs, 10, 20)
 saveRgbImageAsPng(img, 10, 20, "output.png")
 fs.writeFileSync('blueprint.json', JSON.stringify(JSON.parse(decoded), null, 4), 'utf8');
 } catch (err) {
